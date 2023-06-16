@@ -1,4 +1,15 @@
-<section class="contact" id="contact">
+<section
+  class="contact"
+  id="contact"
+  [ngsRevealSet]="{
+    reset: true,
+    distance: '180px',
+    duration: 2000,
+    delay: 200,
+    origin: 'left'
+  }"
+  [ngsSelector]="'.contact'"
+>
   <h2 class="heading">Contáctame</h2>
 
   <form action="">

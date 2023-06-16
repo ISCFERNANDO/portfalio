@@ -33,12 +33,12 @@
       ipsum? Obcaecati, ab aliquid.
     </p>
     <div class="social-media">
-      <a href="#"><i class="bx bxl-facebook"></i></a>
-      <a href="#"><i class="bx bxl-linkedin"></i></a>
-      <a href="#"><i class="bx bxl-stack-overflow"></i></a>
-      <a href="#"><i class="bx bxl-github"></i></a>
+      <a (click)="goToUrl(1)"><i class="bx bxl-facebook"></i></a>
+      <a (click)="goToUrl(2)"><i class="bx bxl-linkedin"></i></a>
+      <a (click)="goToUrl(3)"><i class="bx bxl-stack-overflow"></i></a>
+      <a (click)="goToUrl(4)"><i class="bx bxl-github"></i></a>
     </div>
-    <a href="#" class="btn">Descargar CV</a>
+    <a (click)="downloadCV()" class="btn">Descargar CV</a>
   </div>
 
   <div

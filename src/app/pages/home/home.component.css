@@ -3,7 +3,9 @@
   justify-content: center;
   align-items: center;
 }
-
+a {
+  cursor: pointer;
+}
 .home-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
@@ -21,18 +23,6 @@
   animation: floatImage 4s ease-in-out infinite;
   border-radius: 50%;
   box-shadow: 0 0.4rem 0.4rem var(--second-bg-color);
-}
-
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2.4rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .home-content p {
@@ -56,6 +46,7 @@
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .social-media a:hover {
