@@ -1,0 +1,57 @@
+<section class="home" id="home">
+  <div
+    class="home-content"
+    [ngsRevealSet]="{
+      reset: true,
+      distance: '80px',
+      duration: 2000,
+      delay: 200,
+      origin: 'top'
+    }"
+    [ngsSelector]="'.home-content'"
+  >
+    <h3>Hola, Soy!</h3>
+    <h1
+      [ngsRevealSet]="{
+        reset: true,
+        distance: '80px',
+        duration: 2000,
+        delay: 200,
+        origin: 'left'
+      }"
+      [ngsSelector]="'.home-content h1'"
+    >
+      Luis Fernando Prudencio Cruz
+    </h1>
+    <h3>Y soy un <span #multipleText class="multiple-text"></span></h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur totam
+      voluptate laudantium voluptatum dolore vitae porro alias velit dolorem ad.
+      Cupiditate impedit similique magni itaque totam minus excepturi! Obcaecati
+      tempore voluptate, suscipit, cumque dolorem nobis atque temporibus
+      possimus doloribus enim harum optio magni nemo necessitatibus perferendis
+      ipsum? Obcaecati, ab aliquid.
+    </p>
+    <div class="social-media">
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-linkedin"></i></a>
+      <a href="#"><i class="bx bxl-stack-overflow"></i></a>
+      <a href="#"><i class="bx bxl-github"></i></a>
+    </div>
+    <a href="#" class="btn">Descargar CV</a>
+  </div>
+
+  <div
+    class="home-img"
+    [ngsRevealSet]="{
+      reset: true,
+      distance: '80px',
+      duration: 2000,
+      delay: 200,
+      origin: 'bottom'
+    }"
+    [ngsSelector]="'.home-img'"
+  >
+    <img src="assets/images/home.png" alt="No se pudo cargar la imágen" />
+  </div>
+</section>

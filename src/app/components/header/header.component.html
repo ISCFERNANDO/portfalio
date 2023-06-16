@@ -1,0 +1,26 @@
+<header class="header">
+  <a routerLink="/home" (click)="closeMenu()" class="logo">LFernando</a>
+  <i
+    class="bx"
+    [class]="menuOpen === true ? 'bx-x' : 'bx-menu'"
+    id="menu-icon"
+    (click)="toggleMenu()"
+  ></i>
+  <nav class="navbar" #navbar [class.active]="menuOpen">
+    <a routerLink="/home" (click)="closeMenu()" routerLinkActive="active"
+      >Inicio</a
+    >
+    <a routerLink="/about" (click)="closeMenu()" routerLinkActive="active"
+      >Acerca de</a
+    >
+    <a routerLink="/services" (click)="closeMenu()" routerLinkActive="active"
+      >Servicios</a
+    >
+    <a routerLink="/projects" (click)="closeMenu()" routerLinkActive="active"
+      >Portafolio</a
+    >
+    <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="active"
+      >Contacto</a
+    >
+  </nav>
+</header>
