@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { NgsRevealModule } from 'ngx-scrollreveal';
@@ -12,6 +14,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,19 @@ import { ServicesComponent } from './pages/services/services.component';
     ContactComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, NgsRevealModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    NgsRevealModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot({
+      progressBar: true,
+      closeButton: true,
+    }), // ToastrModule added
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -12,15 +12,51 @@
 >
   <h2 class="heading">Contáctame</h2>
 
-  <form action="">
+  <form (ngSubmit)="sendEmail()" [formGroup]="formContact">
     <div class="input-box">
-      <input type="text" placeholder="Nombre completo" />
-      <input type="email" placeholder="Correo electrónico" />
+      <div class="form-group">
+        <input
+          type="text"
+          placeholder="Nombre completo *"
+          formControlName="fullName"
+        />
+        <label
+          class="error-message"
+          *ngIf="fullName.invalid && fullName.touched"
+          >El nombre completo es requerido</label
+        >
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          placeholder="Correo electrónico *"
+          formControlName="email"
+        />
+        <label class="error-message" *ngIf="email.invalid && email.touched"
+          >El correo electronico es requerido</label
+        >
+      </div>
     </div>
 
     <div class="input-box">
-      <input type="number" placeholder="Número de teléfono" />
-      <input type="text" placeholder="Asunto" />
+      <div class="form-group">
+        <input
+          type="number"
+          placeholder="Número de teléfono *"
+          formControlName="phoneNumber"
+        />
+        <label
+          class="error-message"
+          *ngIf="phoneNumber.invalid && phoneNumber.touched"
+          >El número de telefono es requerido</label
+        >
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Asunto *" formControlName="subject" />
+        <label class="error-message" *ngIf="subject.invalid && subject.touched"
+          >El asunto es requerido</label
+        >
+      </div>
     </div>
 
     <textarea
@@ -29,6 +65,7 @@
       cols="30"
       rows="10"
       placeholder="Ingrese su mensaje"
+      formControlName="message"
     ></textarea>
 
     <input type="submit" value="Enviar mensaje" class="btn" />
